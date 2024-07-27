@@ -5,7 +5,7 @@ import React from "react";
 export default function Review() {
   return (
     <section className="text-gray-600 body-font min-h-screen">
-      <div className="container px-5 py-24 mx-auto flex flex-col max-w-screen-xl w-full">
+      <div className="flex flex-col w-full">
         <div className="w-full mx-auto">
           <div className="rounded-lg h-64 overflow-hidden">
             <Image

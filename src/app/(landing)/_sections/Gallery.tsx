@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import GalleryComponent from "@/components/shared/GalleryComponent";
 
 const images = [
@@ -49,12 +48,12 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container max-w-screen-xl px-4 sm:px-6 lg:px-8 py-24 mx-auto">
+    <section className="text-gray-600 body-font min-h-screen w-full">
+      <div className="py-24">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h2 className="sm:text-3xl text-2xl font-medium title-font pb-4 text-gray-900">
             Naše hotové stavby
-          </h1>
+          </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table. Franzen you probably

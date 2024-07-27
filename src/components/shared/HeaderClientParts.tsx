@@ -8,7 +8,7 @@ const links = [
   { href: "/", label: "Domov" },
   { href: "/about", label: "O nás" },
   { href: "/careers", label: "Kariéra" },
-  { href: "/servies", label: "Služby" },
+  { href: "/services", label: "Služby" },
   { href: "/contact", label: "Kontakt" },
 ];
 
@@ -40,7 +40,7 @@ export default function HeaderClientParts({ isWhite = false }) {
             className={`rounded hover:bg-${isWhite ? "transparent" : "black"} bg-${isWhite ? "transparent" : "black"} md:hidden`}
           >
             <MenuIcon className="h-6 w-6 text-white" />
-            <span className="sr-only">Toggle navigation menu</span>
+            <span className="sr-only">Navigační menu</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="overflow-y-auto">
@@ -48,29 +48,18 @@ export default function HeaderClientParts({ isWhite = false }) {
             <Construction className="h-6 w-6" />
             <span className="sr-only">Skapec</span>
           </Link>
-          <div className="grid gap-2 py-6">
-            <Link
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
-            >
-              Products
-            </Link>
-            <Link
-              href="#"
-              className="flex w-full items-center py-2 text-lg font-semibold"
-              prefetch={false}
-            >
-              Contact
-            </Link>
-          </div>
+          <ul
+            className="flex flex-col items-center gap-6 py-8 text-sm
+    "
+          >
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link className={`transition text-black`} href={link.href}>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </SheetContent>
       </Sheet>
     </div>

@@ -50,9 +50,9 @@ export default function GalleryComponent({
               <h2 className="tracking-widest text-sm title-font font-medium text-yellow-500 mb-1">
                 {image.title}
               </h2>
-              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+              <h2 className="title-font text-lg font-medium text-gray-900 mb-3">
                 Shooting Stars
-              </h1>
+              </h2>
               <p className="leading-relaxed">
                 Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
                 microdosing tousled waistcoat.

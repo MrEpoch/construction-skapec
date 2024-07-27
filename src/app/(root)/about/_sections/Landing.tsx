@@ -69,12 +69,12 @@ const cardData = [
 
 export default function Landing() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="mx-auto max-w-screen-xl w-full container px-4 sm:px-6 lg:px-8 py-24">
+    <section className="text-gray-600 body-font min-h-screen w-full">
+      <div className="w-full">
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Pitchfork Kickstarter Taxidermy
+              Náš příběh
             </h1>
             <div className="h-1 w-20 bg-primary rounded"></div>
           </div>

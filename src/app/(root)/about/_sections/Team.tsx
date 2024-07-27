@@ -85,11 +85,11 @@ const TeamMembers = [
 export default function Team() {
   return (
     <section className="text-gray-600 min-h-screen w-full body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="w-full">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
+          <h2 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
             OUR TEAM
-          </h1>
+          </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table. Franzen you probably

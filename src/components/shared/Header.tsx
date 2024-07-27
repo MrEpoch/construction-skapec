@@ -8,7 +8,7 @@ const black_ops_one = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 export default function Header({ isWhite = false }) {
   return (
     <header className="bg-transparent">
-      <div className="mx-auto flex h-16 max-w-screen-xl justify-between w-full items-center gap-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-container py-8 flex items-center">
         <Link
           className="inline-flex flex-1 items-center gap-2 text-primary"
           href="/"

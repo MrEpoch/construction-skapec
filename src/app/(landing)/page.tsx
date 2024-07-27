@@ -5,11 +5,14 @@ import Review from "./_sections/Review";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full">
-      <Landing />
-      <Gallery />
-      <CTA />
-      <Review />
+    <main className="h-view-container">
+      <div className="max-w-container">
+        <Landing />
+        <div className="min-h-screen" />
+        <Gallery />
+        <CTA />
+        <Review />
+      </div>
     </main>
   );
 }
