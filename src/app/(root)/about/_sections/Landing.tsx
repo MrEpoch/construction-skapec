@@ -14,7 +14,7 @@ function Card({
 }) {
   return (
     <div className="xl:w-1/4 md:w-1/2 p-4">
-      <div className="bg-primary shadow-lg p-6 rounded-lg">
+      <div className="bg-secondary shadow-lg p-6 rounded-lg">
         <Image
           width={800}
           height={800}

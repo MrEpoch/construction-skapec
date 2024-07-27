@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CTA from "./_sections/CTA";
 import Gallery from "./_sections/Gallery";
 import Landing from "./_sections/Landing";
@@ -12,6 +13,7 @@ export default function Home() {
         <Gallery />
         <CTA />
         <Review />
+        <Link href="/work">Kontaktujte nás</Link>
       </div>
     </main>
   );
