@@ -1,7 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-function AboutCard({ i, data }) {
+function AboutCard({
+  i,
+  data,
+}: {
+  i: number;
+  data: { imageUrl: string; title: string; description: string };
+}) {
   return (
     <div
       className={`flex justify-center min-h-screen w-full flex-col md:flex-${i % 2 === 0 ? "row" : "row-reverse"} items-center text-left gap-4`}
@@ -29,21 +35,21 @@ function AboutCard({ i, data }) {
 
 const AboutInformation = [
   {
-    title: "Gem",
+    title: "Začátek",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
     imageUrl: "/assets/construction1.webp",
   },
   {
-    title: "Gem",
+    title: "Práce",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
     imageUrl: "/assets/construction1.webp",
   },
   {
-    title: "Gem",
+    title: "Snaha",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
     imageUrl: "/assets/construction1.webp",
   },
 ];

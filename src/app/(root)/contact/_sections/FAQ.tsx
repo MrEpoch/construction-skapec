@@ -2,24 +2,24 @@ import FaqsCard from "@/components/shared/FaqCard";
 
 const faqsList = [
   {
-    q: "What are some random questions to ask?",
-    a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+    q: "Lorem ipsum dolor sit amet, qui ?",
+    a: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat adipisicing minim sint cillum sint consectetur cupidatat.",
   },
   {
-    q: "Do you include common questions?",
-    a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
+    q: "Lorem ipsum dolor sit amet, qui ?",
+    a: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat adipisicing minim sint cillum sint consectetur cupidatat.",
   },
   {
-    q: "Can I use this for 21 questions?",
-    a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
+    q: "Lorem ipsum dolor sit amet, qui ?",
+    a: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat adipisicing minim sint cillum sint consectetur cupidatat.",
   },
   {
-    q: "Are these questions for girls or for boys?",
-    a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
+    q: "Lorem ipsum dolor sit amet, qui ?",
+    a: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat adipisicing minim sint cillum sint consectetur cupidatat.",
   },
   {
-    q: "What do you wish you had more talent doing?",
-    a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+    q: "Lorem ipsum dolor sit amet, qui ?",
+    a: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat adipisicing minim sint cillum sint consectetur cupidatat.",
   },
 ];
 

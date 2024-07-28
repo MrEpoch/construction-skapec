@@ -75,6 +75,10 @@
   }
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 55px;

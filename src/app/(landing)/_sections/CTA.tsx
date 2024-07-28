@@ -10,7 +10,7 @@ export default function CTA() {
           <div className="bg-primary py-8 md:py-12 lg:py-24">
             <div className="mx-auto max-w-xl text-center">
               <h2 className="text-2xl font-bold text-black md:text-3xl">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                Začněta s námi vaší novou a pevnou výstavbu.
               </h2>
 
               <p className="hidden text-black/90 sm:mt-4 sm:block">

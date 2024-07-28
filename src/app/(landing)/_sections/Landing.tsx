@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Construction1 from "../../../../public/assets/construction1.webp";
 
 export default function Landing() {
   return (
@@ -12,12 +13,10 @@ export default function Landing() {
           <Image
             className="absolute top-0 left-0 w-full min-h-full brightness-50
       mb-10 object-cover object-center"
-            width={2000}
             loading="eager"
             priority
-            height={2000}
             alt="hero"
-            src="/assets/construction1.webp"
+            src={Construction1}
           />
         </div>
         <div className="text-center text-white h-full w-full flex-1 flex flex-col justify-center items-center rounded py-8">

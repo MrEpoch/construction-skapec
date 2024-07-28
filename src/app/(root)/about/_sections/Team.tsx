@@ -46,7 +46,7 @@ function TeamMemberCard({ info }: { info: TeamMemberCardInfo }) {
 const TeamMembers = [
   {
     name: "Holden Caulfield",
-    jobDescription: "Senior Developer",
+    jobDescription: "Vedoucí",
     imageUrl: "/assets/construction1.webp",
     description:
       "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
@@ -55,7 +55,7 @@ const TeamMembers = [
   },
   {
     name: "Atticus Finch",
-    jobDescription: "Junior Developer",
+    jobDescription: "Vedoucí",
     imageUrl: "/assets/construction1.webp",
     description:
       "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
@@ -64,7 +64,7 @@ const TeamMembers = [
   },
   {
     name: "Alper Kamu",
-    jobDescription: "Accountant",
+    jobDescription: "Vedoucí",
     imageUrl: "/assets/construction1.webp",
     description:
       "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
@@ -73,7 +73,7 @@ const TeamMembers = [
   },
   {
     name: "Devon Lane",
-    jobDescription: "Software Engineer",
+    jobDescription: "Vedoucí",
     imageUrl: "/assets/construction1.webp",
     description:
       "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
@@ -84,16 +84,15 @@ const TeamMembers = [
 
 export default function Team() {
   return (
-    <section className="text-gray-600 min-h-screen w-full body-font">
+    <section id="team" className="text-gray-600 min-h-screen w-full body-font">
       <div className="w-full">
         <div className="flex flex-col text-center w-full mb-20">
-          <h2 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
-            OUR TEAM
+          <h2 className="text-2xl py-4 text-gray-900 tracking-widest">
+            Náš tým
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven't heard of them.
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat sunt exercitation.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">

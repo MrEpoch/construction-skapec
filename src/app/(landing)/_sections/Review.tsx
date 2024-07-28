@@ -50,16 +50,16 @@ export default function Review() {
                 party. Locavore small batch listicle gastropub farm-to-table
                 lumbersexual salvia messenger bag. Coloring book flannel
                 truffaut craft beer drinking vinegar sartorial, disrupt fashion
-                axe normcore meh butcher. Portland 90's scenester vexillologist
-                forage post-ironic asymmetrical, chartreuse disrupt butcher
-                paleo intelligentsia pabst before they sold out four loko. 3
-                wolf moon brooklyn.
+                axe normcore meh butcher. Portland 90&apos;s scenester
+                vexillologist forage post-ironic asymmetrical, chartreuse
+                disrupt butcher paleo intelligentsia pabst before they sold out
+                four loko. 3 wolf moon brooklyn.
               </p>
               <Link
                 href="/services"
                 className="text-primary inline-flex items-center"
               >
-                Learn More
+                Zjistit více
                 <svg
                   fill="none"
                   stroke="currentColor"
