@@ -15,7 +15,6 @@ export default function Header({ isWhite = false }) {
           href="/"
         >
           <span className="sr-only">Home</span>
-          <Image src="/logo.svg" width={40} height={40} alt="logo" />
           <span className={`${black_ops_one.className} uppercase text-3xl`}>
             Skapec
           </span>
