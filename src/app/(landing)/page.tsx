@@ -1,4 +1,4 @@
-import CTA from "./_sections/CTA";
+import CTA from "@/components/shared/CTA";
 import Gallery from "./_sections/Gallery";
 import Landing from "./_sections/Landing";
 import Review from "./_sections/Review";

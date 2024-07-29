@@ -1,3 +1,4 @@
+import { constAboutPage } from "@/constants/cs_main";
 import { Facebook, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,60 +44,20 @@ function TeamMemberCard({ info }: { info: TeamMemberCardInfo }) {
   );
 }
 
-const TeamMembers = [
-  {
-    name: "Holden Caulfield",
-    jobDescription: "Vedoucí",
-    imageUrl: "/assets/construction1.webp",
-    description:
-      "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-    FacebookLink: "https://www.facebook.com/",
-    LinkedInLink: "https://www.linkedin.com/",
-  },
-  {
-    name: "Atticus Finch",
-    jobDescription: "Vedoucí",
-    imageUrl: "/assets/construction1.webp",
-    description:
-      "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-    FacebookLink: "https://www.facebook.com/",
-    LinkedInLink: "https://www.linkedin.com/",
-  },
-  {
-    name: "Alper Kamu",
-    jobDescription: "Vedoucí",
-    imageUrl: "/assets/construction1.webp",
-    description:
-      "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-    FacebookLink: "https://www.facebook.com/",
-    LinkedInLink: "https://www.linkedin.com/",
-  },
-  {
-    name: "Devon Lane",
-    jobDescription: "Vedoucí",
-    imageUrl: "/assets/construction1.webp",
-    description:
-      "DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.",
-    FacebookLink: "https://www.facebook.com/",
-    LinkedInLink: "https://www.linkedin.com/",
-  },
-];
-
 export default function Team() {
   return (
     <section id="team" className="text-gray-600 min-h-screen w-full body-font">
       <div className="w-full">
         <div className="flex flex-col text-center w-full mb-20">
           <h2 className="text-2xl py-4 text-gray-900 tracking-widest">
-            Náš tým
+            {constAboutPage.team.heading}
           </h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat sunt exercitation.
+            {constAboutPage.team.para}
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {TeamMembers.map((member, index) => (
+          {constAboutPage.team.TeamMembers.map((member, index) => (
             <TeamMemberCard key={index} info={member} />
           ))}
         </div>

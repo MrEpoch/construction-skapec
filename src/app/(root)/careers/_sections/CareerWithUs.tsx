@@ -1,4 +1,4 @@
-import { Handshake, ShieldCheck, Sunrise } from "lucide-react";
+import { constCareersPage } from "@/constants/cs_main";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -33,27 +33,6 @@ function Card({
   );
 }
 
-const CareerCardContent = [
-  {
-    title: "Skvělý kolektiv",
-    description:
-      "Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.",
-    icon: Sunrise,
-  },
-  {
-    title: "Bezpečnost práce",
-    description:
-      "Blue bottle rinfix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Pracovní výhody",
-    description:
-      "Blue bottle rinfix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.",
-    icon: Handshake,
-  },
-];
-
 export default function CareerWithUs() {
   return (
     <section className="text-gray-600 body-font">
@@ -64,18 +43,20 @@ export default function CareerWithUs() {
             className="object-cover object-center h-full w-full"
             width={900}
             height={900}
-            src="/assets/construction1.webp"
+            src={constCareersPage.careerWithUs.landingImage}
           />
         </div>
         <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-          {CareerCardContent.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              description={card.description}
-              ImgIcon={card.icon}
-            />
-          ))}
+          {constCareersPage.careerWithUs.CareerCardContent.map(
+            (card, index) => (
+              <Card
+                key={index}
+                title={card.title}
+                description={card.description}
+                ImgIcon={card.icon}
+              />
+            ),
+          )}
         </div>
       </div>
     </section>

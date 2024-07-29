@@ -1,4 +1,4 @@
-import { constCareersPage } from "@/constants/cs_main";
+import { constServicesPage } from "@/constants/cs_main";
 import Link from "next/link";
 import React from "react";
 
@@ -22,10 +22,10 @@ function Card({
         </h1>
         <p className="leading-relaxed mb-3">{description}</p>
         <Link
-          href="/contact"
+          href={`/services/${type}`}
           className="text-yellow-500 inline-flex items-center"
         >
-          Kontaktovat
+          Prohlédnout
           <svg
             className="w-4 h-4 ml-2"
             viewBox="0 0 24 24"
@@ -44,23 +44,13 @@ function Card({
   );
 }
 
-export default function CareerCards() {
+export default function Services() {
   return (
-    <section className="text-gray-600 body-font min-h-screen w-full">
-      <div className="container px-5 items-center flex flex-col gap-8 py-24 mx-auto">
-        <h1 className="text-3xl w-fit font-semibold sm:text-4xl rounded-xl text-center bg-primary text-black px-4 py-2">
-          {constCareersPage.careerCards.heading}
-        </h1>
-        <div className="flex flex-wrap -m-4">
-          {constCareersPage.careerCards.cardContent.map((card, index) => (
-            <Card
-              key={index}
-              type={card.type}
-              title={card.title}
-              description={card.description}
-            />
-          ))}
-        </div>
+    <section className="min-h-screen w-full items-center justify-center flex flex-col">
+      <div className="flex flex-wrap py-8">
+        {constServicesPage.services.servicesData.map((data, index) => (
+          <Card key={index} {...data} />
+        ))}
       </div>
     </section>
   );

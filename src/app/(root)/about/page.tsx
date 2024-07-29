@@ -2,7 +2,7 @@ import React from "react";
 import Landing from "./_sections/Landing";
 import Team from "./_sections/Team";
 import About from "./_sections/About";
-import CTA from "@/app/(landing)/_sections/CTA";
+import CTA from "@/components/shared/CTA";
 
 export default function page() {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { constCTA } from "@/constants/cs_main";
 
 export default function CTA() {
   return (
@@ -10,14 +11,11 @@ export default function CTA() {
           <div className="bg-primary py-8 md:py-12 lg:py-24">
             <div className="mx-auto max-w-xl text-center">
               <h2 className="text-2xl font-bold text-black md:text-3xl">
-                Začněta s námi vaší novou a pevnou výstavbu.
+                {constCTA.heading}
               </h2>
 
               <p className="hidden text-black/90 sm:mt-4 sm:block">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                egestas tempus tellus etiam sed. Quam Link scelerisque amet
-                ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-                quisque ut interdum tincidunt duis.
+                {constCTA.para}
               </p>
 
               <div className="mt-4 md:mt-8">
@@ -25,7 +23,7 @@ export default function CTA() {
                   href="/contact"
                   className="inline-block rounded border border-black bg-black px-12 py-3 text-sm font-medium text-yellow-500 transition hover:bg-transparent hover:text-black focus:outline-none focus:ring focus:ring-yellow-400"
                 >
-                  Kontaktujte nás
+                  {constCTA.link}
                 </Link>
               </div>
             </div>
@@ -33,16 +31,16 @@ export default function CTA() {
 
           <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
             <Image
-              alt=""
-              src="/assets/construction1.webp"
+              alt="CTA obrázek 1"
+              src={constCTA.img1}
               width={500}
               height={800}
               className="h-40 w-full object-cover sm:h-56 md:h-full"
             />
 
             <Image
-              alt=""
-              src="/assets/construction1.webp"
+              alt="CTA obrázek 2"
+              src={constCTA.img2}
               width={500}
               height={800}
               className="h-40 w-full object-cover sm:h-56 md:h-full"

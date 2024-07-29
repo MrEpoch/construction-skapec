@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Construction1 from "../../../../public/assets/construction1.webp";
+import { constHomePage } from "@/constants/cs_main";
 
 export default function Landing() {
   return (
@@ -20,27 +20,21 @@ export default function Landing() {
           />
         </div>
         <div className="text-center text-white h-full w-full flex-1 flex flex-col justify-center items-center rounded py-8">
-          <h1 className="text-white">Kvalitní a rychlá práce</h1>
+          <h1 className="text-white">{constHomePage.landing.headingMain}</h1>
           <Separator className="my-8 h-1 w-8 bg-primary" />
-          <p className="py-8 description-p">
-            Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing
-            tousled. Chambray dreamcatcher trust fund, kitsch vice godard
-            disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh.
-            Pour-over meditation PBR&amp;B pickled ennui celiac mlkshk freegan
-            photo booth af fingerstache pitchfork.
-          </p>
+          <p className="py-8 description-p">{constHomePage.landing.paraMain}</p>
           <div className="flex justify-center gap-4">
             <Link
               href="/services"
-              className="text-black bg-primary py-2 px-4 hover:bg-primary/90  font-bold rounded"
+              className="text-black bg-primary py-2 px-4 hover:bg-primary/90 shadow-lg font-bold rounded"
             >
-              Služby
+              {constHomePage.landing.link1Main}
             </Link>
             <Link
               href="/about"
-              className="text-black bg-card hover:bg-card/80 transition py-2 px-4 font-bold rounded"
+              className="text-black bg-card hover:bg-card/80 transition py-2 px-4 shadow-lg font-bold rounded"
             >
-              O nás
+              {constHomePage.landing.link2Main}
             </Link>
           </div>
         </div>

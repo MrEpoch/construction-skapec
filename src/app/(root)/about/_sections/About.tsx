@@ -1,3 +1,4 @@
+import { constAboutPage } from "@/constants/cs_main";
 import Image from "next/image";
 import React from "react";
 
@@ -33,37 +34,16 @@ function AboutCard({
   );
 }
 
-const AboutInformation = [
-  {
-    title: "Začátek",
-    description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
-    imageUrl: "/assets/construction1.webp",
-  },
-  {
-    title: "Práce",
-    description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
-    imageUrl: "/assets/construction1.webp",
-  },
-  {
-    title: "Snaha",
-    description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla ",
-    imageUrl: "/assets/construction1.webp",
-  },
-];
-
 export default function About() {
   return (
     <section className="text-black flex items-center justify-center py-16 min-h-screen w-full body-font">
       <div className="w-full">
         <div className="text-center">
           <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Kdo jsme?
+            {constAboutPage.about.heading}
           </h2>
           <div className="py-16 flex flex-col gap-8">
-            {AboutInformation.map((info, index) => (
+            {constAboutPage.about.AboutInformation.map((info, index) => (
               <AboutCard key={index} i={index} data={info} />
             ))}
           </div>

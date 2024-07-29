@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { constAboutPage } from "@/constants/cs_main";
 
 function Card({
   subTitle,
@@ -36,37 +37,6 @@ function Card({
   );
 }
 
-const cardData = [
-  {
-    subTitle: "2024-5-5",
-    title: "Budova 1",
-    description:
-      "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    imageUrl: "/assets/construction1.webp",
-  },
-  {
-    subTitle: "2024-5-5",
-    title: "Budova 2",
-    description:
-      "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    imageUrl: "/assets/construction1.webp",
-  },
-  {
-    subTitle: "2024-5-5",
-    title: "Budova 3",
-    description:
-      "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    imageUrl: "/assets/construction1.webp",
-  },
-  {
-    subTitle: "2024-5-5",
-    title: "Budova 4",
-    description:
-      "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    imageUrl: "/assets/construction1.webp",
-  },
-];
-
 export default function Landing() {
   return (
     <section className="text-gray-600 body-font min-h-screen w-full">
@@ -74,19 +44,16 @@ export default function Landing() {
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Náš příběh
+              {constAboutPage.landing.heading}
             </h1>
             <div className="h-1 w-20 bg-primary rounded"></div>
           </div>
           <p className="lg:w-1/2 w-full leading-relaxed text-gray-">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven&apos;t heard of them man bun deep jianbing selfies heirloom
-            prism food truck ugh squid celiac humblebrag.
+            {constAboutPage.landing.para}
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {cardData.map((card, index) => (
+          {constAboutPage.landing.cardData.map((card, index) => (
             <Card
               key={index}
               subTitle={card.subTitle}
