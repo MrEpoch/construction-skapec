@@ -1,4 +1,5 @@
-import { Linkedin } from "lucide-react";
+import { constFooter } from "@/constants/cs_main";
+import { Clock, Globe, Landmark, Linkedin, Scale } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +9,7 @@ export default function Footer() {
     <footer className="bg-white lg:grid lg:grid-cols-5">
       <div className="relative block h-32 lg:col-span-2 lg:h-full">
         <Image
-          src="/assets/construction1.webp"
+          src={constFooter.footerImg}
           width={800}
           height={800}
           alt="Stavební ukázka"
@@ -22,25 +23,40 @@ export default function Footer() {
             <p>
               <span className="text-xs uppercase tracking-wide text-gray-500">
                 {" "}
-                Zavolejte nám{" "}
+                {constFooter.phoneText}{" "}
               </span>
 
               <Link
-                href="#"
+                href={`tel:${constFooter.phoneNumber}`}
                 className="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
               >
-                0123456789
+                {constFooter.phoneNumber}
               </Link>
             </p>
 
-            <ul className="mt-8 space-y-1 text-sm text-gray-700">
-              <li>Od pondělí do pátku: 9h - 17h</li>
+            <ul className="mt-8 space-y-1 text-sm gap-4 flex flex-col text-gray-700">
+              <li className="flex gap-2 items-center">
+                <Clock />
+                {constFooter.whenText}
+              </li>
+              <li className="flex gap-2 items-center">
+                <Scale />
+                {constFooter.ico.text} {constFooter.ico.content}
+              </li>
+              <li className="flex gap-2 items-center">
+                <Landmark />
+                {constFooter.dic.text} {constFooter.dic.content}
+              </li>
+              <li className="flex gap-2 items-center">
+                <Globe />
+                {constFooter.location}
+              </li>
             </ul>
 
             <ul className="mt-8 flex gap-6">
               <li>
                 <Link
-                  href="#"
+                  href={constFooter.facebookAddress}
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
@@ -64,7 +80,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="#"
+                  href={constFooter.linkedinAddress}
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75"
@@ -78,84 +94,42 @@ export default function Footer() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <p className="font-medium text-gray-900">Služby</p>
+              <p className="font-medium text-gray-900">
+                {constFooter.services.heading}
+              </p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    1on1 Coaching{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Company Review{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Accounts Review{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    HR Consulting{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    SEO Optimisation{" "}
-                  </Link>
-                </li>
+                {constFooter.services.servicesList.map((data, index) => (
+                  <li key={index}>
+                    <Link
+                      href={`/services#${data.toLowerCase()}`}
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      {data}{" "}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <p className="font-medium text-gray-900">Společnost</p>
+              <p className="font-medium text-gray-900">
+                {constFooter.company.heading}
+              </p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    O nás{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/about#team"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Tým{" "}
-                  </Link>
-                </li>
+                {constFooter.company.companyInfoList.map((data, index) => (
+                  <li key={index}>
+                    <Link
+                      href={data.link}
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      {data.title}{" "}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

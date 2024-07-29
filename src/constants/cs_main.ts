@@ -7,6 +7,17 @@ import {
   Sunrise,
 } from "lucide-react";
 
+export const constCookieBanner = {
+  heading: "Používáme cookies!",
+  para: `Tato webová stránka používá nezbytné soubory cookies k zajištění správného fungování webu. 
+  Využíváme soubory cookie k personalizaci obsahu a reklam, poskytování funkcí sociálních médií a analýze naší návštěvnosti. 
+  Informace sdílíme se svými partnery pro sociální média, inzerci a analýzy.`,
+  btnAccept: "Přijmout vše",
+  btnDecline: "Odmítnout vše",
+  learnMore: "/",
+  learnMoreText: "Zjistit více",
+};
+
 export const constCTA = {
   heading: "Začněta s námi vaší novou a pevnou výstavbu.",
   para: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
@@ -370,6 +381,44 @@ export const constServicesPage = {
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      },
+    ],
+  },
+};
+
+export const constFooter = {
+  copyrightText: "© 2024 Skypec. Všechna práva vyhrazena.",
+  footerImg: "/assets/construction1.webp",
+  phoneText: "Zavolejte nám",
+  phoneNumber: "012345678",
+  whenText: "Od pondělí do pátku: 9h - 17h",
+  facebookAddress: "https://www.facebook.com/",
+  linkedinAddress: "https://www.linkedin.com/",
+  ico: {
+    text: "IČO:",
+    content: "00000000",
+  },
+  dic: {
+    text: "DIČ:",
+    content: "CZ00000000",
+  },
+  location: "Praha, Neznámá 123.",
+  services: {
+    heading: "Služby",
+    servicesList: constServicesPage.services.servicesData
+      .map((v) => v.type)
+      .splice(0, 4),
+  },
+  company: {
+    heading: "Společnost",
+    companyInfoList: [
+      {
+        title: "O nás",
+        link: "/about",
+      },
+      {
+        title: "Tým",
+        link: "/about#team",
       },
     ],
   },
