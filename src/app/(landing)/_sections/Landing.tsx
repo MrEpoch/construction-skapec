@@ -15,7 +15,7 @@ export default function Landing() {
       mb-10 object-cover object-center"
             loading="eager"
             priority
-            alt="hero"
+            alt={`${constHomePage.landing.headingMain} hero`}
             src={Construction1}
           />
         </div>
@@ -26,12 +26,14 @@ export default function Landing() {
           <div className="flex justify-center gap-4">
             <Link
               href="/services"
+              aria-label={constHomePage.landing.link1Main}
               className="text-black bg-primary py-2 px-4 hover:bg-primary/90 shadow-lg font-bold rounded"
             >
               {constHomePage.landing.link1Main}
             </Link>
             <Link
               href="/about"
+              aria-label={constHomePage.landing.link2Main}
               className="text-black bg-card hover:bg-card/80 transition py-2 px-4 shadow-lg font-bold rounded"
             >
               {constHomePage.landing.link2Main}

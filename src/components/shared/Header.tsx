@@ -2,7 +2,7 @@ import { Black_Ops_One } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import HeaderClientParts from "./HeaderClientParts";
-import Image from "next/image";
+import { constHeader } from "@/constants/cs_main";
 
 const black_ops_one = Black_Ops_One({ subsets: ["latin"], weight: "400" });
 
@@ -14,9 +14,9 @@ export default function Header({ isWhite = false }) {
           className="inline-flex flex-1 text-yellow-500 items-center gap-2 text-primary"
           href="/"
         >
-          <span className="sr-only">Home</span>
+          <span className="sr-only">{constHeader.srMain}</span>
           <span className={`${black_ops_one.className} uppercase text-3xl`}>
-            Skapec
+            {constHeader.companyName}
           </span>
         </Link>
         <HeaderClientParts isWhite={isWhite} />

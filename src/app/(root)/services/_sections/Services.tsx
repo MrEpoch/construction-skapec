@@ -6,7 +6,9 @@ function Card({
   type,
   title,
   description,
+  slug
 }: {
+  slug: string;
   type: string;
   title: string;
   description: string;
@@ -22,7 +24,7 @@ function Card({
         </h1>
         <p className="leading-relaxed mb-3">{description}</p>
         <Link
-          href={`/services/${type}`}
+          href={`/services/${slug}`}
           className="text-yellow-500 inline-flex items-center"
         >
           Prohlédnout

@@ -49,6 +49,7 @@ export default function GalleryComponent({
             data-pswp-height={image.height}
             target="_blank"
             rel="noreferrer"
+            aria-label={image.title}
             className="lg:w-1/3 sm:w-1/2 p-4"
           >
             <div className="flex relative">

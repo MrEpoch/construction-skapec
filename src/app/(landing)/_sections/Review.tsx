@@ -12,7 +12,7 @@ export default function Review() {
             <Image
               width={1200}
               height={800}
-              alt="content"
+              alt={""}
               className="object-cover object-center h-full w-full"
               src="/assets/construction1.webp"
             />

@@ -1,16 +1,10 @@
 import Link from "next/link";
 import React from "react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Construction, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
-
-const links = [
-  { href: "/", label: "Domov" },
-  { href: "/about", label: "O nás" },
-  { href: "/careers", label: "Kariéra" },
-  { href: "/services", label: "Služby" },
-  { href: "/contact", label: "Kontakt" },
-];
+import { constHeader } from "@/constants/cs_main";
+import Image from "next/image";
 
 export default function HeaderClientParts({ isWhite = false }) {
   return (
@@ -20,9 +14,10 @@ export default function HeaderClientParts({ isWhite = false }) {
           className="flex header items-center gap-6 text-sm
     "
         >
-          {links.map((link) => (
+          {constHeader.links.map((link) => (
             <li key={link.href}>
               <Link
+                aria-label={link.label}
                 className={`transition text-${isWhite ? "white" : "black"}`}
                 href={link.href}
               >
@@ -40,21 +35,27 @@ export default function HeaderClientParts({ isWhite = false }) {
             className={`rounded hover:bg-${isWhite ? "transparent" : "black"} bg-${isWhite ? "transparent" : "black"} md:hidden`}
           >
             <MenuIcon className="h-6 w-6 text-white" />
-            <span className="sr-only">Navigační menu</span>
+            <span className="sr-only">{constHeader.srNav}</span>
           </Button>
         </SheetTrigger>
         <SheetContent side="left" className="overflow-y-auto">
           <Link href="#" prefetch={false}>
-            <Construction className="h-6 w-6" />
-            <span className="sr-only">Skapec</span>
+            <Image
+              src={constHeader.companyLogo}
+              width={60}
+              height={60}
+              className="object-cover w-8 h-8"
+              alt="logo"
+            />
+            <span className="sr-only">{constHeader.companyName}</span>
           </Link>
           <ul
             className="flex flex-col items-center gap-6 py-8 text-sm
     "
           >
-            {links.map((link) => (
+            {constHeader.links.map((link) => (
               <li key={link.href}>
-                <Link className={`transition text-black`} href={link.href}>
+                <Link className={`transition text-black`} aria-label={link.label} href={link.href}>
                   {link.label}
                 </Link>
               </li>

@@ -21,6 +21,7 @@ export default function CTA() {
               <div className="mt-4 md:mt-8">
                 <Link
                   href="/contact"
+                  aria-label={constCTA.link}
                   className="inline-block rounded border border-black bg-black px-12 py-3 text-sm font-medium text-yellow-500 transition hover:bg-transparent hover:text-black focus:outline-none focus:ring focus:ring-yellow-400"
                 >
                   {constCTA.link}

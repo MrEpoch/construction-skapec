@@ -29,6 +29,20 @@ export const constCTA = {
   img2: "/assets/construction1.webp",
 };
 
+export const constHeader = {
+  srMain: "Domov",
+  companyName: "Skapec",
+  companyLogo: "/logo.svg",
+  srNav: "Navigační menu",
+  links: [
+    { href: "/", label: "Domov" },
+    { href: "/about", label: "O nás" },
+    { href: "/careers", label: "Kariéra" },
+    { href: "/services", label: "Služby" },
+    { href: "/contact", label: "Kontakt" },
+  ],
+};
+
 export const constHomePage = {
   landing: {
     headingMain: "Kvalitní a rychlá práce",
@@ -123,6 +137,7 @@ export const constHomePage = {
                 disrupt butcher paleo intelligentsia pabst before they sold out
                 four loko. 3 wolf moon brooklyn.`,
     link1: "Zjistit více",
+    imgAlt: "Obrázek vykonávající se práce"
   },
 };
 
@@ -347,36 +362,42 @@ export const constServicesPage = {
   services: {
     servicesData: [
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       },
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       },
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       },
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       },
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       },
       {
+        slug: "strecha",
         type: "Střecha",
         title: "Výstavba střech",
         description:
@@ -406,7 +427,7 @@ export const constFooter = {
   services: {
     heading: "Služby",
     servicesList: constServicesPage.services.servicesData
-      .map((v) => v.type)
+    .map((v) => ({ slug: v.slug, type: v.type }))
       .splice(0, 4),
   },
   company: {
@@ -423,3 +444,13 @@ export const constFooter = {
     ],
   },
 };
+
+export const constServicesTypePage = {
+  strecha: {
+    heading: "Výstavba střech",
+    para1: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
+    heading2: "Kvalita nadevše",
+    imgSrc: "/assets/construction1.webp",
+    para2: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis."
+  }
+}

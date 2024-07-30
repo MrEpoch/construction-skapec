@@ -102,11 +102,11 @@ export default function Footer() {
                 {constFooter.services.servicesList.map((data, index) => (
                   <li key={index}>
                     <Link
-                      href={`/services#${data.toLowerCase()}`}
+                      href={`/services#${data.slug}`}
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      {data}{" "}
+                      {data.type}{" "}
                     </Link>
                   </li>
                 ))}
