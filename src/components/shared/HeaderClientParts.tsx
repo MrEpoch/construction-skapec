@@ -55,7 +55,11 @@ export default function HeaderClientParts({ isWhite = false }) {
           >
             {constHeader.links.map((link) => (
               <li key={link.href}>
-                <Link className={`transition text-black`} aria-label={link.label} href={link.href}>
+                <Link
+                  className={`transition text-black`}
+                  aria-label={link.label}
+                  href={link.href}
+                >
                   {link.label}
                 </Link>
               </li>

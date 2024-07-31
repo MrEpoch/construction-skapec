@@ -6,7 +6,7 @@ function Card({
   type,
   title,
   description,
-  slug
+  slug,
 }: {
   slug: string;
   type: string;

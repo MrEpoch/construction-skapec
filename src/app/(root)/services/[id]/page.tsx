@@ -5,14 +5,21 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 export default function Page({ params }: { params: { id: string } }) {
-  const data = constServicesTypePage[params.id as keyof typeof constServicesTypePage];
+  const data =
+    constServicesTypePage[params.id as keyof typeof constServicesTypePage];
   if (!data) redirect("/services");
   return (
     <main className="h-view-container">
       <div className="max-w-container flex flex-col gap-16">
         <h1 className="text-3xl font-semibold">{data?.heading}</h1>
         <p className="text-lg">{data?.para1}</p>
-        <Image src={data?.imgSrc} alt={`${data?.heading}`} width={1200} height={700} className="w-full h-72 object-cover" />
+        <Image
+          src={data?.imgSrc}
+          alt={`${data?.heading}`}
+          width={1200}
+          height={700}
+          className="w-full h-72 object-cover"
+        />
         <h2 className="text-3xl font-semibold">{data?.heading2}</h2>
         <p className="text-lg">{data?.para2}</p>
         <CTA />
