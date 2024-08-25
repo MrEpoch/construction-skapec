@@ -77,7 +77,7 @@ export default function CookieConsent({
       <div className="bg-secondary rounded-md m-2">
         <div className="grid gap-2">
           <div className="border-b border-border h-14 flex items-center justify-between p-4">
-            <h1 className="text-lg font-medium">{content.heading}</h1>
+            <h2 className="text-lg font-medium">{content.heading}</h2>
             <CookieIcon className="h-[1.2rem] w-[1.2rem]" />
           </div>
           <div className="p-4">

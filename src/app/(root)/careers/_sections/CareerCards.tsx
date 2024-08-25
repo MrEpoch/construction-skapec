@@ -17,9 +17,9 @@ function Card({
         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
           {type}
         </h2>
-        <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+        <h2 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
           {title}
-        </h1>
+        </h2>
         <p className="leading-relaxed mb-3">{description}</p>
         <Link
           href="/contact"

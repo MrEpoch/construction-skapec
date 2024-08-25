@@ -1,5 +1,5 @@
 "use client";
-import react, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function FaqsCard({
   faqsList,

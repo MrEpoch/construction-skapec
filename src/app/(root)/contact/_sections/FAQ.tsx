@@ -5,9 +5,9 @@ export default function Faq() {
   return (
     <section className="leading-relaxed py-16 min-h-screen flex items-center justify-center flex-col">
       <div className="space-y-3 text-center">
-        <h1 className="text-3xl text-gray-800 font-semibold">
+        <h2 className="text-3xl text-gray-800 font-semibold">
           {constContactPage.faq.heading}
-        </h1>
+        </h2>
         <p className="text-gray-600 max-w-lg mx-auto text-lg">
           {constContactPage.faq.para}
         </p>

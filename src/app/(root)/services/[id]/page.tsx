@@ -3,10 +3,18 @@ import { constServicesTypePage } from "@/constants/cs_main";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import React from "react";
+import { z } from "zod";
 
 export default function Page({ params }: { params: { id: string } }) {
+  const paramsValidationZod = z.string().min(1);
+  if (!params.id) redirect("/services");
+  const paramsValidation = paramsValidationZod.safeParse(params.id);
+  if (!paramsValidation.success) redirect("/services");
+
   const data =
-    constServicesTypePage[params.id as keyof typeof constServicesTypePage];
+    constServicesTypePage[
+      paramsValidation.data as keyof typeof constServicesTypePage
+    ];
   if (!data) redirect("/services");
   return (
     <main className="h-view-container">
